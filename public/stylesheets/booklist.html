@@ -24,38 +24,57 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo"><i class="material-icons">bookmark_border</i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="home.html">Home</a></li>
         <li><a href="top100.html">Top 100</a></li>
-        <li><a href="findbooks.html">Find Books</a></li>
+        <li><a href="findbooks.html">Find books</a></li>
+        <li><a href="booklist.html">Book List</a></li>
       </ul>
     </div>
-  </nav>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="top100.html">Top 100</a></li>
+      <li><a href="findbooks.html">Find books</a></li>
+      <li><a href="booklist.html">Book List</a></li>
+    </ul>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
-      </div>
-    </div>
-  </div>
+  
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>List One</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>List Two</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>List Three</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
+
+  <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
+    <div class="container">
+      <div class="row">
+        <div class="col 10 offset-l0 s6">
+          <div>
+            <p>Developed by <a href="https://github.com/achaudhry93" class="nav-item"><span class="icon"><i class="fa fa-github"></i></span>achaudhry93</a>, <a href="https://github.com/hannahjorich" class="nav-item">hannahjorich</a>, <a href="https://github.com/Enrique303" class="nav-item">Enrique303</a>, <a href="https://github.com/EdenKhaos" class="nav-item">EdenKhaos, & <a href="https://github.com/lvv5040" class="nav-item">lvv5040</a> &copy; 2020</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      
+      </div>
+    </div>
+  </footer>
 
 </body>
 
