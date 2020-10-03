@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-
-  <html>
+<html>
     <head>
+      <!--Let browser know website is optimized for mobile-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+      <link rel="stylesheet" type="text/css" href="./style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+      <script src="/assets/js/home.js"></script>
+      <script src="https://code.jquery.com/jquery.js"></script>
     </head>
-
-    <body>
-
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-  </html>
 
   <nav>
     <div class="nav-wrapper">
@@ -29,59 +23,51 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="top100.html">Top 100</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="top100.html">Top 10</a></li>
         <li><a href="findbooks.html">Find books</a></li>
         <li><a href="booklist.html">Book List</a></li>
       </ul>
     </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="top100.html">Top 100</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="top100.html">Top 10</a></li>
       <li><a href="findbooks.html">Find books</a></li>
       <li><a href="booklist.html">Book List</a></li>
     </ul>
 
-  <div class="container">
-    <div class="row">
+    <div class="row center-align">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+        <div class="card white darken-1">
+          <div class="card-content black-text">
+            <span class="card-title">Book Results</span>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          <div class="card-action">
+            <a href="#">Add Book</a>
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
 
   <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
     <div class="container">
       <div class="row">
-        <div class="col 10 offset-l0 s6">
-          <div>
-            <p>Developed by <a href="https://github.com/achaudhry93" class="nav-item"><span class="icon"><i class="fa fa-github"></i></span>achaudhry93</a>, <a href="https://github.com/hannahjorich" class="nav-item">hannahjorich</a>, <a href="https://github.com/Enrique303" class="nav-item">Enrique303</a>, <a href="https://github.com/EdenKhaos" class="nav-item">EdenKhaos, & <a href="https://github.com/lvv5040" class="nav-item">lvv5040</a> &copy; 2020</p>
-            </div>
+        <div>
+          <p>Developed by <a href="https://github.com/achaudhry93" class="nav-item"><span class="icon"><i class="fa fa-github"></i></span>achaudhry93</a>, <a href="https://github.com/hannahjorich" class="nav-item">hannahjorich</a>, <a href="https://github.com/Enrique303" class="nav-item">Enrique303</a>, <a href="https://github.com/EdenKhaos" class="nav-item">EdenKhaos, & <a href="https://github.com/lvv5040" class="nav-item">lvv5040</a> &copy; 2020</p>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      
       </div>
     </div>
   </footer>
 
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 
+</body>
 </html>
