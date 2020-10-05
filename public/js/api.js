@@ -27,7 +27,8 @@ $(document).ready(() => {
                 <p>${book.volumeInfo.description}</p>
               </div>
               <div class="card-action">
-                <a href="#">Add To Book List</a>
+                <button class="button" id="save-book">Add To Book List</button>
+
               </div>
             </div>           
           </div> 
@@ -77,4 +78,9 @@ $(document).ready(() => {
       }
     });
   }
+
+  $("#save-book").on("click", () => {
+    const title = book.volumeInfo.title;
+    console.log(title);
+  });
 });
