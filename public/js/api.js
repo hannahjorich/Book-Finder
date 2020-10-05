@@ -78,10 +78,9 @@ $(document).ready(() => {
       }
     });
   }
-  
-  $("#save-book").on("click", function(){
-    var title = book.volumeInfo.title;
-    console.log(title)
-  })
 
+  $("#save-book").on("click", () => {
+    const title = book.volumeInfo.title;
+    console.log(title);
+  });
 });
