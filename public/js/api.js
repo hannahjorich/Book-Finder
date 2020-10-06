@@ -16,22 +16,24 @@ $(document).ready(() => {
         let output = "";
         $.each(books, (index, book) => {
           output += `
-          <div class="row">          
-            <div class="card">
-              <div class="card-image">
-                <img src="${book.volumeInfo.imageLinks.thumbnail}">
+            <div class="col s12 m7">
+              <div class="card horizontal z-depth-2">
+                <div class="card-image">
+                  <img src="${book.volumeInfo.imageLinks.thumbnail}">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <ul>
+                      <li>${book.volumeInfo.title}</p>
+                      <li>${book.volumeInfo.authors}</p>
+                      <li>${book.searchInfo.textSnippet}</p>
+                    </ul>
+                  </div>
+                  <div class="card-action">
+                    <a onclick = "bookSelected('${book.id}')" class="btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
+                  </div>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">${book.volumeInfo.title}</span>
-                <h6>Written by ${book.volumeInfo.authors}</h6>
-                <p>${book.volumeInfo.description}</p>
-              </div>
-              <div class="card-action">
-                <button class="button" id="save-book">Add To Book List</button>
-
-              </div>
-            </div>           
-          </div> 
           `;
         });
         $("#google-books").html(output);
@@ -56,22 +58,27 @@ $(document).ready(() => {
         $.each(books, (index, list) => {
           console.log(list);
           output += `
-          <div class="row">          
-            <div class="card">
-              <div class="card-image">
-                <img src="${list.book_image}">
+          <div class="col s12 m7">
+              <div class="card horizontal z-depth-2">
+                <div class="card-image">
+                  <img src="${list.book_image}">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <ul>
+                      <li>Ranks ${list.rank}</p>
+                      <li>${list.title}</p>
+                      <li>${list.author}</p>
+                      <li>${list.description}</p>
+                    </ul>
+                  </div>
+                  <div class="card-action">
+                  <a href="#"class="btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
+                  <a href="${list.amazon_product_url}" target="_blank" class="waves-effect waves-light btn-small">Buy</a>
+                  </div>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">${list.title}</span>
-                <h6>Written by ${list.author}</h6>
-                <p>${list.description}</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Add To Book List</a>
-                <a href="${list.amazon_product_url}"> Buy</a>
-              </div>
-            </div>           
-          </div> 
+            </div> 
           `;
         });
         $("#nytlist").html(output);
