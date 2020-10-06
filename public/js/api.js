@@ -34,7 +34,6 @@ $(document).ready(() => {
                   </div>
                 </div>
               </div>
-            </div> 
           `;
         });
         $("#google-books").html(output);
@@ -86,4 +85,9 @@ $(document).ready(() => {
       }
     });
   }
+
+  $("#save-book").on("click", () => {
+    const title = book.volumeInfo.title;
+    console.log(title);
+  });
 });
