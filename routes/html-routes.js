@@ -4,44 +4,27 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
-  app.get("/", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
-  });
-
-  app.get("/login", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
-
-  // Here we've add our isAuthenticated middleware to this route.
-  // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
-};
-
 // Routes
 
 module.exports = function(app) {
   // index route loads view.html
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/stylesheets/home.html"));
   });
 
-  app.get("/cms", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+      // top 100 route loads the NYT best sellers
+      app.get("/top100.html", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/stylesheets/top100.html"));
+      });
+    
+
+  // findbooks route loads findbooks.html
+  app.get("/findbooks.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/stylesheets/findbooks.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  // booklist rout loads the booklist.html
+  app.get("/booklist.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/stylesheets/booklist.html"));
   });
-};
+}
