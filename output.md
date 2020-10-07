@@ -5,26 +5,26 @@
 
 ## Table of Contents
 1. [Description](#Description)
-2. [Links](#Links)
-3. [Features](#Features)
+2. [UserStory](#UserStory)
+3. [BonusFeatures](#BonusFeatures)
 4. [License](#License)
-5. [UserStory](#UserStory)
+5. [Links](#Links)
 6. [Demo](#Demo)
 7. [Resources](#Resources)
-8. [FutureDevelopment](#FutureDevelopment)
-9. [Contributors](#Contributors)
+8. [Contributors](#Contributors)
 
-## Links
-undefined
 
-## Features
+## User Story
+ 
+
+## Bonus Features
 undefined
 
 ## License
 This project is licensed under the terms of the MIT license.
 
-## User Story
- 
+## Links
+undefined
 
 ## Demo
 undefined
@@ -32,8 +32,6 @@ undefined
 ## Resources
 undefined
 
-## Future Development
-undefined
 
 ## Contributors
 undefined

@@ -9,8 +9,7 @@
 5. [Links](#Links)
 6. [Demo](#Demo)
 7. [Resources](#Resources)
-8. [FutureDevelopment](#FutureDevelopment)
-9. [Contributors](#Contributors)
+8. [Contributors](#Contributors)
 
 
 ## Description  
@@ -29,7 +28,7 @@ The application gives yout the following options:
 ## Links
 ---
 
-## Features
+## Bonus Features
 ---
 * For each item in the list add a link that will send the User to an external site,     which has more information about the book.
 * Implement a Responsive Design.
@@ -48,12 +47,14 @@ This project is licensed under the terms of the MIT license.
 
 ## Resources
 ---
-* Google Books API
-* New York Times API
+* [Node.js](https://nodejs.org/en/) - JavaScript runtime environment
+* [MySQLWorkbench](https://www.mysql.com/products/workbench/) - Visual database design tool
+    ### Dependencies
+    ---
+    * [inquirer](https://www.npmjs.com/package/inquirer) - For the CLI user interface. This will prompt user within the CLI for employee information.
+    * [console.table](https://www.npmjs.com/package/console.table) - Used to print MySQL into tables to the console.
+    * [mysql](https://www.npmjs.com/package/mysql) - Used to connect to the MySQL database and perform queries
 
-## Future Development
----
-* 
 
 ## Contributors
 ---

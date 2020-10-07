@@ -8,20 +8,19 @@ ${data.description}
 ## Table of Contents
 1. [Description](#Description)
 2. [UserStory](#UserStory)
-3. [Features](#Features)
+3. [BonusFeatures](#BonusFeatures)
 4. [License](#License)
 5. [Links](#Links)
 6. [Demo](#Demo)
 7. [Resources](#Resources)
-8. [FutureDevelopment](#FutureDevelopment)
-9. [Contributors](#Contributors)
+8. [Contributors](#Contributors)
 
 
 ## User Story
 ${data.userStory} 
 
-## Features
-${data.Features}
+## Bonus Features
+${data.bonusFeatures}
 
 ## License
 This project is licensed under the terms of the ${data.license} license.
@@ -35,8 +34,6 @@ ${data.Demo}
 ## Resources
 ${data.Resources}
 
-## Future Development
-${data.FutureDevelopment}
 
 ## Contributors
 ${data.Contributors}
