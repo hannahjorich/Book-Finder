@@ -24,13 +24,13 @@ $(document).ready(() => {
                 <div class="card-stacked">
                   <div class="card-content">
                     <ul>
-                      <li>${book.volumeInfo.title}</p>
+                      <li class ="title">${book.volumeInfo.title}</p>
                       <li>${book.volumeInfo.authors}</p>
                       <li>${book.searchInfo.textSnippet}</p>
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a onclick = "bookSelected('${book.id}')" class="btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
+                    <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">add</i></button>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ $(document).ready(() => {
                   <div class="card-content">
                     <ul>
                       <li>Ranks ${list.rank}</p>
-                      <li>${list.title}</p>
+                      <li class ="title">${list.title}</p>
                       <li>${list.author}</p>
                       <li>${list.description}</p>
                     </ul>
@@ -85,9 +85,26 @@ $(document).ready(() => {
       }
     });
   }
-
-  $("#save-book").on("click", () => {
-    const title = book.volumeInfo.title;
-    console.log(title);
-  });
+});
+// eslint-disable-next-line prefer-arrow-callback
+$(document).on("click",".save-book", function () {
+  const title = $(this)
+    .parent(".card-content")
+    .find(".title")
+    .text();
+  // const author = $(".author").text();
+  // const description = $(".description").text();
+  console.log(title);
+  console.log("hi");
+  // $.ajax({
+  //   method: "POST",
+  //   url: "/api/savebook",
+  //   dataType: {
+  //     bookName: title,
+  //     bookAuthor: author,
+  //     bookDescription: description
+  //   }
+  // }).then(res => {
+  //   console.log(res);
+  // });
 });
