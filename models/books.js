@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   const Book = sequelize.define("Book", {
-    thumbnail: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+    // thumbnail: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [1]
+    //   }
+    // },
     title: {
       type: DataTypes.STRING,
       allowNull: false,

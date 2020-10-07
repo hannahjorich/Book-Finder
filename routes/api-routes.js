@@ -3,12 +3,12 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.post("/api/savebook", (res, req) => {
-    db.Books.create(req.body).then(dbBooklist => {
+    db.Book.create(req.body).then(dbBooklist => {
       res.json(dbBooklist);
     });
   });
   app.get("/booklist", res => {
-    db.Books.findAll({}).then(dbBooklist => {
+    db.Book.findAll({}).then(dbBooklist => {
       res.json(dbBooklist);
     });
   });
