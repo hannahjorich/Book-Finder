@@ -19,18 +19,18 @@ $(document).ready(() => {
             <div class="col s12 m7">
               <div class="card horizontal z-depth-2">
                 <div class="card-image">
-                  <img src="${book.volumeInfo.imageLinks.thumbnail}">
+                  <img class ="image" src="${book.volumeInfo.imageLinks.thumbnail}">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
                     <ul>
-                      <li>${book.volumeInfo.title}</p>
-                      <li>${book.volumeInfo.authors}</p>
-                      <li>${book.searchInfo.textSnippet}</p>
+                      <li class ="title">${book.volumeInfo.title}</p>
+                      <li class ="author">${book.volumeInfo.authors}</p>
+                      <li class ="description">${book.searchInfo.textSnippet}</p>
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a onclick = "bookSelected('${book.id}')" class="btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
+                    <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">add</i></button>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ $(document).ready(() => {
                   <div class="card-content">
                     <ul>
                       <li>Ranks ${list.rank}</p>
-                      <li>${list.title}</p>
+                      <li class ="title">${list.title}</p>
                       <li>${list.author}</p>
                       <li>${list.description}</p>
                     </ul>
@@ -85,9 +85,40 @@ $(document).ready(() => {
       }
     });
   }
-
-  $("#save-book").on("click", () => {
-    const title = book.volumeInfo.title;
-    console.log(title);
+});
+// eslint-disable-next-line prefer-arrow-callback
+$(document).on("click", ".save-book", function() {
+  // const thumbnail = $(this)
+  //   .closest(".card-image")
+  //   .find(".image")
+  //   .attr("src");
+  const title = $(this)
+    .closest(".card-stacked")
+    .find(".title")
+    .text()
+    .trim();
+  const author = $(this)
+    .closest(".card-stacked")
+    .find(".author")
+    .text()
+    .trim();
+  const description = $(this)
+    .closest(".card-stacked")
+    .find(".description")
+    .text()
+    .trim();
+  console.log(title);
+  console.log(author);
+  console.log(description);
+  $.ajax({
+    method: "POST",
+    url: "/api/savebook",
+    data: {
+      bookName: title,
+      bookDescription: description,
+      bookAuthor: author
+    }
+  }).then(res => {
+    console.log(res);
   });
 });
