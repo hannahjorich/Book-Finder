@@ -114,7 +114,7 @@ $(document).on("click", ".save-book", function() {
     method: "POST",
     url: "/api/savebook",
     data: {
-      bookName: title,
+      bookTitle: title,
       bookDescription: description,
       bookAuthor: author
     }
