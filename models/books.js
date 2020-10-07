@@ -9,19 +9,19 @@ module.exports = function(sequelize, DataTypes) {
     // },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       len: [1]
     },
     author: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       len: [1]
     }
   });
