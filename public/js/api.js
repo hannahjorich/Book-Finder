@@ -152,7 +152,7 @@ function listBooks() {
                   </ul>
                 </div>
                 <div class="card-action">
-                  <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">add</i></button>
+                  <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">delete</i></button>
                 </div>
               </div>
             </div>
