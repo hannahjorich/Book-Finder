@@ -7,9 +7,8 @@
 3. [Features](#Features)
 4. [License](#License)
 5. [Links](#Links)
-6. [Demo](#Demo)
-7. [Resources](#Resources)
-8. [Contributors](#Contributors)
+6. [Resources](#Resources)
+7. [Contributors](#Contributors)
 
 
 ## Description  
@@ -41,9 +40,6 @@ The application gives yout the following options:
 ---
 This project is licensed under the terms of the MIT license.
 
-
-## Demo
----
 
 ## Resources
 ---
