@@ -15,4 +15,13 @@ module.exports = function(app) {
       res.json(dbBooklist);
     });
   });
+  // app.delete("/api/booklist/:id", (req, res) => {
+  //   db.User.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(dbBooklist => {
+  //     res.json(dbBooklist);
+  //   });
+  // });
 };

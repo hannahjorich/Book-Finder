@@ -74,7 +74,7 @@ $(document).ready(() => {
                     </ul>
                   </div>
                   <div class="card-action">
-                  <a href="#"class="btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
+                  <a href="#"class="save-book btn pulse-effect waves-light blue"><i class="material-icons">add</i></a>
                   <a href="${list.amazon_product_url}" target="_blank" class="waves-effect waves-light btn-small">Buy</a>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ function listBooks() {
                   </ul>
                 </div>
                 <div class="card-action">
-                  <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">delete</i></button>
+                  <button class="delete-book btn pulse-effect waves-light blue"><i class="material-icons">delete</i></button>
                 </div>
               </div>
             </div>
@@ -163,3 +163,10 @@ function listBooks() {
     }
   });
 }
+// eslint-disable-next-line prefer-arrow-callback
+// $(document).on("click", ".delete-button", function() {
+//   $.ajax({
+//     method: "DELETE",
+//     url: "/booklist" + id
+//   });
+// });
