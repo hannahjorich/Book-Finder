@@ -89,10 +89,10 @@ $(document).ready(() => {
 });
 // eslint-disable-next-line prefer-arrow-callback
 $(document).on("click", ".save-book", function() {
-  // const thumbnail = $(this)
-  //   .closest(".card-image")
-  //   .find(".image")
-  //   .attr("src");
+  const thumbnail = $(this)
+    .closest(".card")
+    .find("img")
+    .attr("src");
   const title = $(this)
     .closest(".card-stacked")
     .find(".title")
@@ -117,7 +117,8 @@ $(document).on("click", ".save-book", function() {
     data: {
       title: title,
       description: description,
-      author: author
+      author: author,
+      thumbnail: thumbnail
     }
   }).then(res => {
     console.log(res);
@@ -140,7 +141,7 @@ function listBooks() {
           <div class="col s12 m7">
             <div class="card horizontal z-depth-2">
               <div class="card-image">
-                <img class ="image" src="">
+                <img class ="image" src="${book.thumbnail}">
               </div>
               <div class="card-stacked">
                 <div class="card-content">

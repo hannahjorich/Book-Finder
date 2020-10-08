@@ -23,6 +23,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: true,
       len: [1]
+    },
+
+    thumbnail: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   });
 
