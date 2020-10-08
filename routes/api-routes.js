@@ -2,16 +2,15 @@
 const db = require("../models");
 
 module.exports = function(app) {
-  app.post("/api/savebook", (res, req) => {
-    db.Book.create({
-      title: req.body.title,
-      description: req.body.description,
-      author: req.body.author
+  app.post("/savebook", (req, res) => {
+    db.Book.create(req.body).then(dbBooklist => {
+      res.json(dbBooklist);
+      
       // req.body).then(dbBooklist => {
       // // res.json(dbBooklist);
     });
   });
-  app.get("/booklist", res => {
+  app.get("/booklist", (req, res) => {
     db.Book.findAll({}).then(dbBooklist => {
       res.json(dbBooklist);
     });
