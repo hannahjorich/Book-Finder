@@ -5,7 +5,7 @@ module.exports = function(app) {
   app.post("/savebook", (req, res) => {
     db.Book.create(req.body).then(dbBooklist => {
       res.json(dbBooklist);
-      
+
       // req.body).then(dbBooklist => {
       // // res.json(dbBooklist);
     });

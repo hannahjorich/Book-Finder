@@ -124,19 +124,18 @@ $(document).on("click", ".save-book", function() {
   });
 });
 
-
-
+// eslint-disable-next-line no-unused-vars
 function listBooks() {
   $.ajax({
     method: "GET",
-    url: `/booklist`,
+    url: "/booklist",
     dataType: "json",
     success: res => {
       console.log(res);
       const books = res;
       let output = "";
       $.each(books, (index, book) => {
-        console.log(book)
+        console.log(book);
         output += `
           <div class="col s12 m7">
             <div class="card horizontal z-depth-2">
@@ -157,7 +156,6 @@ function listBooks() {
               </div>
             </div>
         `;
-        
       });
       console.log(output);
       $("#google-books").html(output);
