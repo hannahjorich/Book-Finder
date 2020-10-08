@@ -27,7 +27,7 @@ The application gives yout the following options:
 ## Links
 ---
 * Heroku Deployed Link: https://book-worms-book-finder.herokuapp.com/
-* Githup Repo: https://github.com/hannahjorich/Book-Finder
+* Github Repo: https://github.com/hannahjorich/Book-Finder
 
 ## Bonus Features
 ---
