@@ -40,6 +40,7 @@ $(document).ready(() => {
       }
     });
   }
+
   $("#get-nytlist").on("click", e => {
     const find = $("#top-books").val();
     topBooks(find);
@@ -112,13 +113,52 @@ $(document).on("click", ".save-book", function() {
   console.log(description);
   $.ajax({
     method: "POST",
-    url: "/api/savebook",
+    url: "/savebook",
     data: {
-      bookTitle: title,
-      bookDescription: description,
-      bookAuthor: author
+      title: title,
+      description: description,
+      author: author
     }
   }).then(res => {
     console.log(res);
   });
 });
+
+// eslint-disable-next-line no-unused-vars
+function listBooks() {
+  $.ajax({
+    method: "GET",
+    url: "/booklist",
+    dataType: "json",
+    success: res => {
+      console.log(res);
+      const books = res;
+      let output = "";
+      $.each(books, (index, book) => {
+        console.log(book);
+        output += `
+          <div class="col s12 m7">
+            <div class="card horizontal z-depth-2">
+              <div class="card-image">
+                <img class ="image" src="">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <ul>
+                    <li class ="title">${book.title}</p>
+                    <li class ="author">${book.author}</p>
+                    <li class ="description">${book.description}</p>
+                  </ul>
+                </div>
+                <div class="card-action">
+                  <button class="save-book btn pulse-effect waves-light blue"><i class="material-icons">add</i></button>
+                </div>
+              </div>
+            </div>
+        `;
+      });
+      console.log(output);
+      $("#google-books").html(output);
+    }
+  });
+}
